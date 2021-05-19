@@ -209,12 +209,14 @@ def get_started(message):
     bot.send_message(message.chat.id, "Choose an option:", reply_markup=menu)
 
 
+@bot.message_handler(commands=['gain'])
 @bot.message_handler(regexp="Top Gainers")
 def gain_stats(message):
     gain_message = message_top_gain_or_loss(top_gain_or_loss_data("gain"))
     bot.send_message(message.chat.id, gain_message)
 
 
+@bot.message_handler(commands=['loss'])
 @bot.message_handler(regexp="Top Lossers")
 def loss_stats(message):
     loss_message = message_top_gain_or_loss(top_gain_or_loss_data("loss"))
