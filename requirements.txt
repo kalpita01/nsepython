@@ -1,4 +1,0 @@
-pyTelegramBotAPI
-python-dotenv
-flask
-git+https://github.com/StreamAlpha/pynse.git
